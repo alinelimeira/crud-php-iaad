@@ -1,7 +1,7 @@
 <?php
 $servidor = "127.0.0.1";
 $usuario = "root";
-$senha = "";
+$senha = "ZMq9oQrrV7RCCX";
 $banco = "startup";
 $conecta = mysqli_connect($servidor,$usuario,$senha,$banco);
 mysqli_set_charset( $conecta, 'utf8');
