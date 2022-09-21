@@ -4,7 +4,7 @@
     error_reporting(0); // aqui remover o notice erro da pagina
     date_default_timezone_set('America/Recife');
     include('templatemenu.html');
-    if(isset($_POST["nomestartup"]) && isset($_POST["nomestartup"])) {
+    if(isset($_POST["nomestartup"])) {
       //mysqli_real_escape_string($link_bd,$string) -  com essa função ele ignora os caracteres especiais e converte tudo em string
       $nomestartup = $_POST["nomestartup"];
       $cidadestartup = $_POST["cidadestartup"];

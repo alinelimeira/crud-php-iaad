@@ -21,7 +21,7 @@
           <form action="listarStartup.php" method="POST">
                 <div class="mb-3 mt-3">
                   <label for="nomestartup">Nome Startup a ser pesquisada:</label>
-                  <input type="nomestartup" class="form-control" id="nomestartup" placeholder="Escreva o nome da startup" name="nomestartup">
+                  <input type="text" class="form-control" id="nomestartup" placeholder="Escreva o nome da startup" name="nomestartup">
                 </div>
                 <button type="submit" class="btn btn-primary">PESQUISAR</button>
           </form>
