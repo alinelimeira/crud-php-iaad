@@ -4,12 +4,17 @@
     error_reporting(0); // aqui remover o notice erro da pagina
     date_default_timezone_set('America/Recife');
     include('templatemenu.html');
-    if(isset($_POST["nomelinguagem"])) {
+    if(isset($_POST["id_linguagem"])) {
       //mysqli_real_escape_string($link_bd,$string) -  com essa função ele ignora os caracteres especiais e converte tudo em string
-      $nomelinguagem = $_POST["nomelinguagem"];
-     
-      $listarlinguagem  = "SELECT * FROM linguagem_programacao WHERE nome_linguagem LIKE '$nomelinguagem%'";
+      $id_linguagem = $_POST["id_linguagem"];
     
+      if(!empty($id_linguagem)){
+        $listarlinguagem  = "SELECT * FROM linguagem_programacao WHERE id_linguagem = '$id_linguagem'";
+
+      }else{
+        $listarlinguagem  = "SELECT * FROM linguagem_programacao";
+      }
+
       $resultado_listar = mysqli_query($conecta,$listarlinguagem);
       if(!$resultado_listar) {
           die("Erro no banco");
@@ -20,8 +25,8 @@
         <div class="col py-3">
           <form action="listarLinguagem.php" method="POST">
                 <div class="mb-3 mt-3">
-                  <label for="nomelinguagem">Nome da Linguagem a ser pesquisada:</label>
-                  <input type="nomelinguagem" class="form-control" id="nomelinguagem" placeholder="Escreva o nome da linguagem" name="nomelinguagem">
+                  <label for="id_linguagem">ID da Linguagem a ser pesquisada:</label>
+                  <input type="text" class="form-control" id="id_linguagem" placeholder="Escreva o ID da linguagem" name="id_linguagem">
                 </div>
                 <button type="submit" class="btn btn-primary">Pesquisar</button>
           </form>

@@ -4,12 +4,16 @@
     error_reporting(0); // aqui remover o notice erro da pagina
     date_default_timezone_set('America/Recife');
     include('templatemenu.html');
-    if(isset($_POST["nomestartup"])) {
+    if(isset($_POST["id_startup"])) {
       //mysqli_real_escape_string($link_bd,$string) -  com essa função ele ignora os caracteres especiais e converte tudo em string
-      $nomestartup = $_POST["nomestartup"];
-     
-      $listarstartup  = "SELECT * FROM startup WHERE nome_startup LIKE '$nomestartup%'";
-    
+      $id_startup = $_POST["id_startup"];
+      
+      if(!empty($id_startup)){
+        $listarstartup  = "SELECT * FROM startup WHERE id_startup = '$id_startup'";
+      }else{
+        $listarstartup  = "SELECT * FROM startup";
+      }
+
       $resultado_listar = mysqli_query($conecta,$listarstartup);
       if(!$resultado_listar) {
           die("Erro no banco");
@@ -20,8 +24,8 @@
         <div class="col py-3">
           <form action="listarStartup.php" method="POST">
                 <div class="mb-3 mt-3">
-                  <label for="nomestartup">Nome Startup a ser pesquisada:</label>
-                  <input type="text" class="form-control" id="nomestartup" placeholder="Escreva o nome da startup" name="nomestartup">
+                  <label for="id_startup">ID da Startup a ser pesquisada:</label>
+                  <input type="text" class="form-control" id="nomestartup" placeholder="Escreva o ID da startup" name="id_startup">
                 </div>
                 <button type="submit" class="btn btn-primary">PESQUISAR</button>
           </form>

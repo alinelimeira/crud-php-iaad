@@ -4,7 +4,7 @@
     error_reporting(0); // aqui remover o notice erro da pagina
     date_default_timezone_set('America/Recife');
     include('templatemenu.html');
-    if(isset($_POST["nomelinguagem"]) && isset($_POST["nomelinguagem"])) {
+    if(isset($_POST["nomelinguagem"]) && isset($_POST["anolancamento"])) {
       //mysqli_real_escape_string($link_bd,$string) -  com essa função ele ignora os caracteres especiais e converte tudo em string
       $nomelinguagem = $_POST["nomelinguagem"];
       $anolancamento = $_POST["anolancamento"];
@@ -23,11 +23,11 @@
           <form action="cadastrarLinguagem.php" method="POST">
                 <div class="mb-3 mt-3">
                   <label for="nomelinguagem">Nome da linguagem:</label>
-                  <input type="nomelinguagem" class="form-control" id="nomelinguagem" placeholder="Escreva o nome da linguagem" name="nomelinguagem">
+                  <input type="text" class="form-control" id="nomelinguagem" placeholder="Escreva o nome da linguagem" name="nomelinguagem">
                 </div>
                 <div class="mb-3 mt-3">
                   <label for="anolancamento">Ano lançamento:</label>
-                  <input type="anolancamento" class="form-control" id="anolancamento" placeholder="Escreva ano de lancamento" name="anolancamento">
+                  <input type="number" class="form-control" id="anolancamento" placeholder="Escreva ano de lancamento" name="anolancamento">
                 </div>
                 <button type="submit" class="btn btn-primary">Cadastrar</button>
           </form>
