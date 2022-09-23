@@ -16,7 +16,7 @@
   <?php include('templatemenu.html')?>    
     <div class="col py-3">
                 HOME CRUD
-                feito por Aline Limeira
+                <h5>O  botão "pesquisar" de cada listar, mostrará a respectiva tabela.</h5>
             </div>
         </div>
     </div>
