@@ -42,9 +42,9 @@
                   <th>ANO DE LANÇAMENTO</th>
                 </tr>
                 <tr>
-                  <td><?php echo $linha["id_linguagem"]?></td>
-                  <td><?php echo $linha["nome_linguagem"]?></td>
-                  <td><?php echo $linha["ano_lancamento"]?></td>
+                  <td width=10%><?php echo $linha["id_linguagem"]?></td>
+                  <td width=30%><?php echo $linha["nome_linguagem"]?></td>
+                  <td width=30%><?php echo $linha["ano_lancamento"]?></td>
                 </tr>
               </table>
           <?php

@@ -34,7 +34,7 @@
            if(mysqli_num_rows($resultado_listar) > 0){ 
             while($linha = mysqli_fetch_assoc($resultado_listar)){
           ?>
-              <table style="width: 50%;">
+              <table style="width: 90%;">
                 <tr>
                     <th>ID Programador</th>
                     <th>ID Startup</th>
@@ -44,12 +44,12 @@
                     <th>E-mail</th>
                 </tr>
                 <tr>
-                    <td><?php echo $linha["id_programador"]?></td>
-                    <td><?php echo $linha["id_startup"]?></td>
-                    <td><?php echo $linha["nome_programador"]?></td>
-                    <td><?php echo $linha["genero"]?></td>
-                    <td><?php echo $linha["data_nascimento"]?></td>
-                    <td><?php echo $linha["email"]?></td>                                        
+                    <td width=14%><?php echo $linha["id_programador"]?></td>
+                    <td width=12%><?php echo $linha["id_startup"]?></td>
+                    <td width=26%><?php echo $linha["nome_programador"]?></td>
+                    <td width=10%><?php echo $linha["genero"]?></td>
+                    <td width=15%><?php echo $linha["data_nascimento"]?></td>
+                    <td width=20%><?php echo $linha["email"]?></td>                                        
                 </tr>
               </table>
           <?php

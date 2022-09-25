@@ -41,9 +41,9 @@
                   <th>CIDADE</th>
                 </tr>
                 <tr>
-                  <td><?php echo $linha["id_startup"]?></td>
-                  <td><?php echo $linha["nome_startup"]?></td>
-                  <td><?php echo $linha["cidade_sede"]?></td>
+                  <td width=15%><?php echo $linha["id_startup"]?></td>
+                  <td width=30%><?php echo $linha["nome_startup"]?></td>
+                  <td width=30%><?php echo $linha["cidade_sede"]?></td>
                 </tr>
               </table>
           <?php
